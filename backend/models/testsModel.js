@@ -34,6 +34,10 @@ const Test = sequelize.define('Test',{
         type:DataTypes.INTEGER,
         allowNull:false,
         comment:'Duration in minutes'
+    },
+    answer_key_uploaded:{
+        type:DataTypes.TINYINT,
+        defaultValue:0
     }
 },
 {

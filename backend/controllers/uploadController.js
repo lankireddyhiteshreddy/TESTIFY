@@ -76,8 +76,6 @@ You must parse the given input into the below JSON format. Only output valid JSO
 [
   {
     "question_text": "What is 2 + 2?",
-    "marks": 1,
-    "negative_marks": 0.25,
     "options": [
       { "option_text": "3", "is_correct": false },
       { "option_text": "4", "is_correct": true },
