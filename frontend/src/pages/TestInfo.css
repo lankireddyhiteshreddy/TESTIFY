@@ -1,0 +1,60 @@
+.test-card {
+    background-color: #fff;
+    border: 2px dashed #000;
+    border-radius: 16px;
+    padding: 16px 24px;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.test-card:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+}
+
+.test-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #003f91;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px #ccc;
+}
+
+.testInfo-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.submit-button {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #333;
+}
+
+.test-details {
+    margin-top: 16px;
+    background-color: #fdf6e4;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px dashed #000;
+    font-size: 14px;
+    color: #333;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}

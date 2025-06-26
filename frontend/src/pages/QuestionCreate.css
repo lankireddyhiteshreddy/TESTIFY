@@ -1,0 +1,134 @@
+/* Container and Navbar */
+.container {
+    min-height: 100vh;
+    background-color: #fdf5e6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-weight: bold;
+    color: #222;
+    font-size: 16px;
+}
+
+.navbar span {
+    cursor: pointer;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    border: 2px dashed #222;
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Labels */
+.label {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+textarea.input-field {
+    resize: vertical;
+}
+
+/* Upload Button */
+.upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Option Inputs */
+.option-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.option-inputs .input-field {
+    width: 120px;
+    margin-bottom: 0;
+}
+
+/* Buttons */
+.gray-button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.preview-image {
+    max-width: 150px;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
+}
+
+/* Fullscreen overlay */
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+.full-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+

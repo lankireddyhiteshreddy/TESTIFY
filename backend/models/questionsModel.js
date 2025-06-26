@@ -1,6 +1,5 @@
 const {DataTypes} = require('sequelize');
-const sequelize = require('../config/db');
-const Test = require('./testsModel');
+const {sequelize} = require('../config/db');
 
 const Question = sequelize.define('Question',{
     question_id : {
@@ -11,12 +10,6 @@ const Question = sequelize.define('Question',{
     test_id : {
         type:DataTypes.INTEGER,
         allowNull:false,
-        references:{
-            model:Test,
-            key:'test_id'
-        },
-        onDelete:'CASCADE',
-        onUpdate:'CASCADE'
     },
     question_text:{
         type:DataTypes.TEXT,

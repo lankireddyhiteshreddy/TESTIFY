@@ -1,6 +1,6 @@
 const {DataTypes} = require('sequelize');
-const sequelize = require('../config/db');
-const Question = require('./questionsModel');
+const {sequelize} = require('../config/db');
+
 
 const Option = sequelize.define('Option',{
     option_id:{
@@ -11,10 +11,6 @@ const Option = sequelize.define('Option',{
     question_id:{
         type:DataTypes.INTEGER,
         allowNull:false,
-        references:{
-            model:Question,
-            key:'question_id'
-        }
     },
     option_text:{
         type:DataTypes.TEXT,

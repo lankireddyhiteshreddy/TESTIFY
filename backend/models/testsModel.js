@@ -1,6 +1,5 @@
-const {DataTypes} = require('sequelize');
-const sequelize = require('../config/db');
-const User = require('./userModel');
+const {DataTypes, DATEONLY} = require('sequelize');
+const {sequelize} = require('../config/db');
 
 const Test = sequelize.define('Test',{
     test_id : {
@@ -11,12 +10,6 @@ const Test = sequelize.define('Test',{
     creator_id : {
         type:DataTypes.INTEGER,
         allowNull:false,
-        references:{
-            model:User,
-            key:'user_id'
-        },
-        onDelete:'CASCADE',
-        onUpdate:'CASCADE'
     },
     title:{
         type:DataTypes.STRING,
@@ -36,6 +29,10 @@ const Test = sequelize.define('Test',{
         comment:'Duration in minutes'
     },
     answer_key_uploaded:{
+        type:DataTypes.TINYINT,
+        defaultValue:0
+    },
+    is_complete:{
         type:DataTypes.TINYINT,
         defaultValue:0
     }

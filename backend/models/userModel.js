@@ -1,5 +1,5 @@
 const {DataTypes} = require('sequelize');
-const sequelize = require('../config/db');
+const {sequelize} = require('../config/db');
 
 const User = sequelize.define('User',{
     user_id:{
@@ -20,9 +20,21 @@ const User = sequelize.define('User',{
             isEmail:true //checks if the email is in correct format , built in validator funciton in validator.js
         }
     },
-    password:{
+    googleId:{
         type:DataTypes.STRING,
-        allowNull:false
+        allowNull:true
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: true 
+    },
+    is_verified : {
+        type : DataTypes.TINYINT,
+        allowNull:true
+    },
+    verificationToken: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 },
 {

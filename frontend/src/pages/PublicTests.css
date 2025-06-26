@@ -1,0 +1,35 @@
+/* This makes the entire page background light */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e4;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #003f91;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px #ccc;
+}
+
+
+/* Container that holds the list of test cards */
+.container {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* Message when there are no tests */
+.container p {
+    font-size: 18px;
+    color: #444;
+}

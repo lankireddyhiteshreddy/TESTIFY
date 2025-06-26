@@ -1,0 +1,114 @@
+
+.test-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.test-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Left area: Question + Navigation */
+.question-area {
+    flex: 3;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+}
+
+/* Right area: Question navigator */
+.question-navigator {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Timer */
+.timer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Question Navigator Grid */
+.navigator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.navigator-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid #999;
+    background-color: #eee;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.navigator-button:hover {
+    background-color: #ddd;
+}
+
+.navigator-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.navigator-button.answered {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .test-body {
+        flex-direction: column;
+    }
+    .question-area, .question-navigator {
+        flex: none;
+        width: 100%;
+        border: none;
+    }
+    .navigator-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

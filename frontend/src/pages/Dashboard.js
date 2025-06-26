@@ -1,45 +1,34 @@
-import React,{useState,useEffect} from 'react';
-import axiosInstance from '../api/axiosInstance';
 import { useNavigate } from 'react-router-dom';
+import {useAuth} from '../context/AuthContext';
+import './Dashboard.css'
 
-function Dashboard(){
-    const [user_name,setUsername] = useState('');
-    const [message,setMessage] = useState('');
-    const navigate = useNavigate();
-    async function getDashboard() {
-        try {
-            const response = await axiosInstance.get('/dashboard');
-            setMessage(response.data.message);
-            setUsername(response.data.user.user_name);
-        } catch (error) {
-            console.log(error.message);
-            setMessage(error.message);
-        }
-    }
+function Dashboard() {
+  const navigate = useNavigate();
+  const {logout} = useAuth();
+  
+  return (
+    <div className="dashboard-container">
+      <nav className="navbar">
+        <span>ABOUT</span>
+        <span onClick={()=>navigate('/dashboard/profile')}>PROFILE</span>
+        <span onClick={logout} className="logout-link">LOGOUT</span>
+      </nav>
 
-    async function deleteAccount(){
-        try{
-            const returnVal = await axiosInstance.delete('/deregister',{data : {user_name}});
-            setMessage(returnVal.data.message);
-            navigate('/');
-        }
-        catch(err){
-            setMessage(err.message);
-        }
-    };
+      <h1 className="title">Practice to Perfection - Upload, Test, Ace!</h1>
 
-    useEffect(()=>{
-        getDashboard();
-    },[]);
-
-    return (
-        <div>
-            <h2>Dashboard</h2>
-            {message && <p>{message}</p>}
-            {user_name && <p>Username : {user_name}</p>}
-            <button onClick={deleteAccount}>Delete Account</button>
-        </div>
-    );
+      <div className="button-container">
+          <button className="start-button" onClick={() => navigate('/tests')}>
+            DISPLAY MY TESTS
+          </button>
+          <button className="start-button" onClick={() => navigate('/create-test')}>
+            GET STARTED (CREATE A TEST)
+          </button>
+          <button className="start-button" onClick={() => navigate('/public-tests')}>
+            DISPLAY PUBLIC TESTS
+          </button>
+      </div>
+    </div>
+  );
 }
 
 export default Dashboard;

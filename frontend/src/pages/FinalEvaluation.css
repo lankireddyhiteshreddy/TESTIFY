@@ -1,0 +1,21 @@
+.evaluation-container {
+    padding: 20px;
+}
+
+.evaluation-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.questions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

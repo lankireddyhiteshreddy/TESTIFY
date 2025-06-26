@@ -1,0 +1,73 @@
+/* Consistent with TestDisplay background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e4;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the summary page */
+.summary-container {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Title matching test title */
+.summary-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #003f91;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px #ccc;
+}
+
+/* Search input styling */
+.summary-search {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    width: 60%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* List of all question cards */
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question-summary-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; /* reasonable space between buttons */
+    margin-top: 30px;
+}
+
+/* Adjusted to remove individual margin and rely on container spacing */
+.summary-home-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+.summary-home-btn:hover {
+    background-color: #333;
+}
