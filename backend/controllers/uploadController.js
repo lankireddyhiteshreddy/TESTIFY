@@ -56,7 +56,7 @@ const processPDF = async (req, res) => {
 
     const prompt = `
 You must parse ONLY the following text into valid JSON array format shown below.
-⚠️ Make sure to REMOVE any leading option labels like "A.", "B.", "C.", "a) ","b) ", etc. from option_text fields. Only include the actual option content.
+Make sure to REMOVE any leading option labels like "A.", "B.", "C.", "a) ","b) ", etc. from option_text fields. Only include the actual option content.
 Sometimes if question text is not clear then you may put in what is the best fit there
 Below is the format in which u should send not the exact question u should put
 Format:
